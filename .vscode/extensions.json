@@ -1,0 +1,15 @@
+{
+        // See https://go.microsoft.com/fwlink/?LinkId=827846
+        // for the documentation about the extensions.json format
+        "recommendations": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "eamodio.gitlens",
+                "ms-python.pylint",
+                "ms-python.isort",
+                "bungcip.better-toml",
+                "sonarsource.sonarlint-vscode",
+                "mhutchie.git-graph",
+                "pkief.material-icon-theme"
+        ]
+}

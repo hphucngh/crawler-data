@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "crawler-data"
+version = "1.0.0"
+description = ""
+authors = ["Crawler Data <hphuc.ngh@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+scrapy = "^2.9.0"
+bs4 = "^0.0.1"
+scrapy-playwright = "^0.0.26"
+scrapy-splash = "^0.9.0"
+scrapy-rotating-proxies = "^0.6.2"
+cloudscraper = "^1.2.71"
+scrapy-cloudflare-middleware = "^0.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.3"
+isort = "^5.11.4"
+flake8 = "^5.0.4"
+black = "^22.8.0"
+pylint = "^2.15.4"
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^3.0.0"
+
+[tool.black]
+line-length = 120
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+combine_as_imports = true
+line_length = 120
+skip = [
+    '.eggs', '.git', '.hg', '.mypy_cache', '.nox', '.pants.d', '.tox',
+    '.venv', '_build', 'buck-out', 'build', 'dist', 'node_modules', 'venv',
+]
+skip_gitignore = true
+
+[tool.pylint]
+max-line-length = 120
+disable = "C0114,E0401,E0611,R0903,R0913,W0703,C0103,W0611"

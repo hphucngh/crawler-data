@@ -1,0 +1,32 @@
+{
+    // common
+    "editor.formatOnSave": true,
+    // python common
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "python.terminal.activateEnvironment": true,
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    // python linting
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/usr/local/bin/pflake8",
+    "python.linting.banditEnabled": false,
+    "python.linting.mypyEnabled": false,
+    "python.linting.pylamaEnabled": false,
+    "python.formatting.provider": "none",
+    "python.formatting.blackArgs": [
+        "--config=./pyproject.toml",
+        "--line-length=120" // VS Code use to override to 88, this ensure correct default
+    ],
+    "isort.args": [
+        "--settings-path=./pyproject.toml"
+    ],
+    "pylint.args": [
+        "--rcfile=./pyproject.toml"
+    ]
+}
